@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELLO WELCOME</title>
+    <link rel="icon" href="https://images.squarespace-cdn.com/content/v1/5e949a92e17d55230cd1d44f/cee51aeb-08f4-4b2f-b8b5-684e5ca26ec2/favicon.ico?format=100w">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="top">
+        <div class="main">
+        <h3>HELLOOO!!</h3>
+        </div>
+        <div class="menu">
+            <a href="#">MENU</a>
+            <a href="#">HOME</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">CONTACT US</a>
+        </div>
+        <div class="search">
+            <div class="icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input type="text" placeholder="Search..." id="myInput">
+            <button class="butti" onclick="search()">Search</button>
+            <button class="del" onclick="del()"id="clearButton">Erase</button>
+        </div>
+    </div>
+    <div class="scroll">
+        <p class="scrolltext" >WELCOME TO THE WEBSITE THIS IS CREATED BY B.SANTHOSH THIS IS LOGIN PAGE</p>
+    </div>
+    <div class="signin">
+        <div class="login">
+            <form action="">
+                <h1>Login </h1>
+                <div class="input-box" id="username">
+                    <input type="text" placeholder="Username"  id="user" required>
+                </div>
+                <div class="input-box" id="password">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox">Remember me
+                    </label>
+                    <a href="#">Forgot password ?</a>
+                </div>
+                <div class="btn1">
+                <button  class="btn"   onclick="showAlert()">login</button></div>
+                <div class="register-link">
+                    <p>Don't have an account?<a href="#">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="fotter">
+        <footer class="foot">&sol;&sol;&copy;&dollar;2021 All rights reserved | This website is made with love by Santhosh.&copy;&dollar;&sol;&sol;</footer></div>
+    </div>
+
+    <style>
+        html,body{
+            margin: 0;
+            background: rgba(34, 177, 221, 0.267);
+            margin: 0;
+            font-family: Arial;
+            border: border-box;
+            overflow-y: hidden;
+        }
+        .top{
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            height: 70px;
+            background-color: brown;
+        }
+        .main h3{
+            color: white;
+            margin-left: 40px;
+            font-style: italic;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bolder;
+        }
+        .menu{
+            display: flex;
+            justify-content: space-evenly;
+            margin-left: 30px;
+        }
+        .menu a{
+            text-decoration-line: underline;
+            text-decoration-color: rgb(31, 10, 228);
+            padding: 5px 7px;
+            color: coral;
+            border-radius: 20px;
+        }
+        .search{
+            display: flex;
+            justify-content: space-evenly;
+            margin-left: 170px;
+        }
+        .icon{
+            border: solid black;
+            width: 40px;
+            height: 50px;
+            justify-content: center;
+            display: flex;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            background-color: rgb(106, 106, 106);
+        }
+        .icon i{
+            display: flex;
+            align-self: center;
+        }
+        .search input{
+            border: 2pX solid black;
+            width: 620px;
+            background-color: rgb(106, 106, 106);
+            color: floralwhite;
+            font-size: medium;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .butti{
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border: 2pX solid black;
+            background-color: rgb(106, 106, 106);
+            color: floralwhite;
+        }
+        .del{
+            border-radius: 8px ;
+            border: 5px solid #234542;
+            margin-left: 30px;
+            background-color: crimson;
+            color: lawngreen;
+            width: 70px;
+        }
+        .scroll{
+            border: 3px solid orangered;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: chartreuse;
+            color:darkred;
+        }
+        .scrolltext{
+            white-space: nowrap;
+            padding: 10px;
+            animation: scrolling 35s linear infinite;
+        }
+        @keyframes scrolling {
+            0%{
+                transform : translateX(100%);
+            }
+            100%{
+                transform : translateX(-100%);
+            }
+        }
+        .scrolltext {
+            font-weight: bolder;
+            font-size: larger;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .signin{
+            border: 3px solid #234542;
+            height: 530px;
+            border-radius: 30px;
+            background-image: url("https://c4.wallpaperflare.com/wallpaper/815/335/690/blurred-wallpaper-preview.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .fotter{
+            border: 5px solid #3d31ea;
+            border-radius:30px ;
+            height: 26px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            background-color: #ea8831;
+        }
+        .foot{
+            white-space: nowrap;
+            font-size: small;
+            animation: scrolling 10s linear infinite;
+        }
+        .signin{
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        .login{
+            height: 510px;
+            border: 10px solid #343433;
+            width: 600px;
+            border-radius: 30px;
+            background: rgb(34,167,195);
+            background: linear-gradient(90deg, rgba(34,167,195,1) 0%, rgba(236,177,50,1) 100%);
+        }
+        .login{
+            width: 420px;
+            border:2px solid rgba(255, 255, 255, .2);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            color: #51ef3c;
+            border-radius: 10px;;
+        }
+        .login h1{
+            font-size: 40px;
+            text-align: center;
+            color: #183888;
+        }
+        .login .input-box{
+            width: 80%;
+            height: 50px;
+            position: relative;
+            margin-top: 20px;
+            align-self: center;
+            justify-self: center;
+            display: flex;
+            margin-left: 35px;
+        }
+        .input-box input{
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            border: 2px solid rgba(255, 255, 255, .2);
+            border-radius: 40px;
+            font-size: 16px;
+            color: #fff;
+        }
+        .input-box input::placeholder{
+            color: #fff;
+            margin-left: 20px;
+        
+        }
+        .login .remember-forgot{
+            display: flex;
+            justify-content: space-between;
+            font-size: 14.5px;
+            margin: 15px 5px 15px;
+        }
+        .remember-forgot label input{
+        accent-color: #fff;
+        margin-right: 3px;
+        }
+        .remember-forgot a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .remember-forgot a:hover{
+            text-decoration: underline;
+            color: red;
+        }
+        .login .btn{
+            width: 100%;
+            height: 45px;
+            background: #be5959;
+            border: 2px solid #ea8831;
+            outline: none;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            cursor: pointer;
+            color: #333;
+            font-weight: 700;
+        }
+        .login .register-link{
+            font-size: 14.5px;
+            text-align: center;
+            margin: 20px 0 15px;
+        
+        }
+        .register-link p a{
+            color: #d53232;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .register-link p a:hover{
+            text-decoration: underline;
+            color: blue;
+        }
+    </style>
+    <script>
+        // search button
+        function search(){
+            var x = document.getElementById("myInput").value;
+            alert("You have searched for : "+ x);
+        }
+        // del button
+        const inputElement = document.getElementById('myInput');
+        const clearButton = document.getElementById('clearButton');
+
+        
+        clearButton.addEventListener('click', function() {
+            inputElement.value = '';
+        });
+        function showAlert() {
+            var user = document.getElementById("user").value;
+            alert(user +    "Hello,Thank you for visiting!!");
+        }
+    </script>
+</body>
+</html>
